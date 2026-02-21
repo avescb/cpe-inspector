@@ -1,0 +1,18 @@
+### List all devices
+GET http://localhost:7557/devices
+Accept: application/json
+
+### Get specific parameters only
+GET http://localhost:7557/devices?projection=InternetGatewayDevice.ManagementServer.PeriodicInformInterval,InternetGatewayDevice.DeviceInfo.SoftwareVersion
+Accept: application/json
+
+### Set PeriodicInformInterval to 60 seconds
+POST http://localhost:7557/devices/202BC1-BM632w-000000/tasks
+Content-Type: application/json
+
+{
+  "name": "setParameterValues",
+  "parameterValues": [
+    ["InternetGatewayDevice.ManagementServer.PeriodicInformInterval", 60, "xsd:unsignedInt"]
+  ]
+}
