@@ -1,0 +1,3 @@
+[submodule "genieacs-docker"]
+	path = genieacs-docker
+	url = https://github.com/GeiserX/genieacs-docker.git
